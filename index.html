@@ -157,8 +157,8 @@
         return (number < 1000) ? number + 1900 : number;
       }
       today = days[now.getDay()] + ", " +
-        months[now.getMonth()] + "/" +
         date + "/" +
+        months[now.getMonth()] + "/" +
         (fourdigits(now.getYear()));
 
       document.getElementById("today").innerHTML = today
