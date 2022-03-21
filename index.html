@@ -1,152 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- PAGE INFO -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
 
-    <!-- ICONS  -->
+<head>
 
-    <link rel="stylesheet" href="./assets/fonts/style.css" />
+  <!-- JS SCRIPT-->
 
-    <!-- STYLES: -->
-    <link rel="stylesheet" href="mainstyle.css" />
+  <!--<link rel="stylesheet" href="main.js"> -->
 
-    <!--Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Raleway:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header id="header">
-      <nav class="container">
-        <a class="logo" href="#">Wemerson<span>Queiroz</span>.</a>
-        <!--   MENU   -->
-        <div class="menu">
-          <ul class="grid">
-            <li><a class="title" href="#homepage">Home</a></li>
-            <li><a class="title" href="#about">About Me</a></li>
-            <li><a class="title" href="#skill">Skills</a></li>
-            <li><a class="title" href="#experience">Experiences</a></li>
-            <li><a class="title" href="#portifolio">Portifolio</a></li>
-            <li><a class="title" href="#contact">Contact Me</a></li>
-          </ul>
+  <!-- PAGE INFO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+
+  <!-- ICONS  -->
+
+  <link rel="stylesheet" href="./assets/fonts/style.css" />
+
+  <!-- STYLES: -->
+  <link rel="stylesheet" href="mainstyle.css" />
+
+  <!--Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Raleway:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body onload="startTime()">
+  <link rel="stylesheet" href="main.js">
+
+  <!--========COURSE AND WORK ARRAYS===========-->
+
+  <script>
+    //============JOBS ARRAY===============//
+
+    let jobs = [{
+        role: "IT Technician",
+        company: "NetServe LTD",
+        period: "03/2020" + " - " + "06/2021"
+      },
+      {
+        role: "Workshop Operative",
+        company: "Taylormade Golf",
+        period: "03/2020" + " - " + "06/2021"
+      },
+      {
+        role: "Ecommerce Manager",
+        company: "Vitrine Refrigeracao",
+        period: "03/2020" + " - " + "06/2021"
+      },
+      {
+        role: "IT Support Technician Jr.",
+        company: "DisDal",
+        period: "03/2020" + " - " + "06/2021"
+      }
+    ]
+
+    //===============COURSES ARRAY======================//
+
+
+    const courses = [{
+        name: "Fullstack Developer Bootcamp",
+        date: "03/2022",
+        where: "Udemy",
+        status: "Ongoing",
+      },
+      {
+        name: "JavaScript Essential Training",
+        date: "03/2022",
+        where: "LinkedIn",
+        status: "Finished",
+      },
+      {
+        name: "Smart Contract Developer",
+        date: "02/2022",
+        where: "Blockchain Council",
+        status: "Finished",
+      },
+      {
+        name: "Ethereum Blockchain Developer",
+        date: "02/2022",
+        where: "Udemy",
+        status: "Finished",
+      },
+      {
+        name: "Comptia A+",
+        date: "10/2020",
+        where: "The Training Room",
+        status: "Finished",
+      }
+    ];
+  </script>
+
+
+
+  <!-------------HEADER ------------>
+  <header id="header">
+    <nav class="container">
+      <a class="logo" href="#">Wemerson<span>Queiroz</span>.</a>
+      <!--   MENU   -->
+      <div class="menu">
+        <ul class="grid">
+          <li><a class="title" href="#homepage">Home</a></li>
+          <li><a class="title" href="#about">About Me</a></li>
+          <li><a class="title" href="#skill">Skills</a></li>
+          <li><a class="title" href="#experience">Experiences</a></li>
+          <li><a class="title" href="#portifolio">Portifolio</a></li>
+          <li><a class="title" href="#contact">Contact Me</a></li>
+        </ul>
+      </div>
+      <!--   /MENU   -->
+      <div class="toggle icon-menu"></div>
+      <div class="toggle icon-cancel"></div>
+    </nav>
+  </header>
+
+
+
+  <main>
+
+    <!-- HOME -->
+
+    <section class="section" id="home">
+      <div class="container grid">
+        <div class="image">
+          <img src="./assets/img/mainbanner.jpeg" alt="To Describe" />
         </div>
-        <!--   /MENU   -->
-        <div class="toggle icon-menu"></div>
-        <div class="toggle icon-cancel"></div>
-      </nav>
-    </header>
+        <div class="text">
+          <h2 class="title">Front-End Developer Jr.</h2>
+          <p>
+            Star Wars fan and coffee addicted.
+            <br />
+            At the moment I'm mastering HTML, CSS & JavaScript.
+          </p>
+          <h3>
+            <pre id="today" class="date"></pre>
+            <pre id="hour" class="date"></pre>
 
-    <main>
-      <section class="section" id="home">
-        <div class="container grid">
-          <div class="image">
-            <img
-              src="./assets/img/mainbanner.jpeg"
-              alt="To Describe"
-            />
-          </div>
-          <div class="text">
-            <h2 class="title">Front-End Developer Jr.</h2>
+          </h3>
+          <a class="button" href="#">Contact-me</a>
+        </div>
+      </div>
+    </section>
+
+    <!----SCRIPT TO SHOW DATE---->
+    <script>
+      var now = new Date();
+      var days = new Array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat');
+
+      var months = new Array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12');
+
+      var date = ((now.getDate() < 10) ? "0" : "") + now.getDate();
+
+      function fourdigits(number) {
+        return (number < 1000) ? number + 1900 : number;
+      }
+      today = days[now.getDay()] + ", " +
+        months[now.getMonth()] + "/" +
+        date + "/" +
+        (fourdigits(now.getYear()));
+
+      document.getElementById("today").innerHTML = today
+
+      //FUNCTION TO SHOW HOUR REAL TIME.
+
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById("hour").innerHTML =
+          h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+      }
+
+      function checkTime(i) {
+        if (i < 10) {
+          i = "0" + i
+        }; // add zero in front of numbers < 10
+        return i;
+      }
+    </script>
+
+    <div class="divider-1"></div>
+    <!---ABOUT---->
+    <section class="section" id="homepage">
+      <div class="container grid">Home</div>
+
+
+    </section>
+
+    <div class="divider-2"></div>
+    <!----- SERVICES ------->
+    <section class="section" id="about">
+      <div class="container grid">
+        <div class="image"><img src="./assets/img/eu.png" alt="Wemerson Queiroz">
+        </div>
+        <div class="text">
+          <h2 class="title">About Me</h2>
+          <p>
+            Despite my IT background, I've never thought about being a programmer, but fell in love with it after
+            getting into Solidity for Blockchain development. Now I'm living and thinking 24/7 about programming and how
+            to be a good professional and how to add value to the world with my skills.
+          </p><br>
+          <p>
+            My first contact with programming was in 2010 when I worked as E-commerce Manager while doing my
+            administrative role and shadowing the Web Developer to finish the website while he was using JavaScript and
+            JQuery.
+          </p><br>
+          <p>
+            Back in the day I'd never imagine that I would be passionate about programming but here I am now, mastering
+            HTML, Css and JavaScript to become a FullStack Developer.
+          </p>
+    </section>
+
+    <div class="divider-1"></div>
+
+    <section class="section" id="skill">
+
+      <div class="container grid">
+        <header>
+          <h2 class="title">Skills</h2>
+          <p>
+            At the moment I'm mastering <strong>HTML, CSS & JavaScript</strong> and my next step is add
+            <strong>ReactJs</strong> to my skillset.
+          </p>
+          <!--==============COURSES ===================-->
+        </header>
+        <div class="cards grid">
+          <div class="card grid">
+            <i class="icon-skill-icon"></i>
+            <h3 class="title ">
+              <pre id="course1" class="title"></pre>
+            </h3>
             <p>
-              Star Wars fan and coffee addicted.
-              <br />
-              At the moment I'm mastering HTML, CSS & JavaScript.
+              Lorem
             </p>
-            <a class="button" href="#">Contact-me</a>
+          </div>
+          <div class="card grid">
+            <i class="icon-skill-icon"></i>
+            <pre id="course2" class="title"></pre>
+            <p>
+              Lorem
+            </p>
+          </div>
+          <div class="card grid">
+            <i class="icon-skill-icon"></i>
+            <pre id="course3" class="title"></pre>
+            <p>
+              Lorem
+            </p>
+          </div>
+          <div class="card grid">
+            <i class="icon-skill-icon"></i>
+            <pre id="course4" class="title"></pre>
+            <p>
+              Lorem
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <div class="divider-2"></div>
 
-      <div class="divider-1"></div>
+    <section class="section" id="experience">
+      <div class="container grid">
+        <header>
+          <h2 class="title">Job Experience</h2>
+        </header>
+        <div class="experiences">
+          <p>
+            <span>&ldquo;</span>
+            Lorem
+          </p>
+          <div class="experience">
 
-      <section class="section" id="homepage">
-        <div class="container grid">Home</div>
-      </section>
 
-      <div class="divider-2"></div>
-
-      <section class="section" id="about">
-        <div class="container grid">
-          <div class="image"><img src="./assets/img/eu.png" alt="Wemerson Queiroz">
           </div>
-          <div class="text">
-            <h2 class="title">About Me</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis at vel velit maiores? Eum modi nulla delectus sapiente fuga! Cupiditate illum sint nihil officiis quas vitae, soluta nobis debitis hic!
-            </p><br>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus asperiores quaerat minus nam! Eligendi dolores dignissimos cupiditate perferendis eveniet neque dicta ducimus minima architecto cum voluptatem quidem, provident amet optio?
-            </p><br>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi temporibus reiciendis aliquam nihil nulla nam voluptate est, officiis dolorum suscipit, quasi provident alias. Soluta nesciunt vitae porro deleniti numquam velit!
-            </p>
-      </section>
-
-      <div class="divider-1"></div>
-
-      <section class="section" id="skill">
-        
-        <div class="container grid">
-          <header>
-            <h2 class="title">Skills</h2>
-            <p>
-              At the moment I'm mastering <strong>HTML, CSS & JavaScript</strong> and my next step is add <strong>ReactJs</strong> to my skillset.
-            </p>
-
-          </header>
-            <div class="cards grid">
-              <div class="card grid">
-                <i class="icon-skill-icon"></i>
-                <h3 class="title">FullStack Bootcamp - Udemy</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, in minus. Excepturi expedita quia minus hic quaerat tempora. Earum eum magni ex molestiae dignissimos aliquam aliquid tempora soluta magnam libero!
-
-                </p>
-              </div>
-              <div class="card grid">
-                <i class="icon-skill-icon"></i>
-                <h3 class="title">JavaScript Essential - LinkedIn</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim iste voluptas natus expedita fugiat, quibusdam eveniet. Voluptatum, ratione hic libero voluptas doloribus incidunt beatae pariatur cum impedit, consequatur provident reiciendis!
-                </p>
-              </div>
-              <div class="card grid">
-                <i class="icon-skill-icon"></i>
-                <h3 class="title">Smart Contract Developer - Blockchain Council</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni distinctio veritatis corrupti suscipit vel totam eveniet optio error ut, quo in numquam iste adipisci, maiores, praesentium modi itaque dolore est!
-                </p>
-              </div>
-            </div>
+          <div class="experience"></div>
+          <div class="experience"></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <div class="divider-2"></div>
+    <div class="divider-1"></div>
 
+    <section class="section" id="experience">
+      <div class="container grid">
+        <header>
+          <h2 class="title">Contact</h2>
+        </header>
+      </div>
+    </section>
 
-      <section class="section" id="experience">
-        <div class="container grid">Job Experience</div>
-     </section>
+    <div class="divider-2"></div>
 
-     <div class="divider-1"></div>
+    <section class="section" id="experience">
+      <div class="container grid">
+        <header>
+          <h2 class="title">Portifolio</h2>
+        </header>
+      </div>
+    </section>
 
-      <section class="section" id="contact">
-        <div class="container grid">Contact</div>
-      </section>
+    </section>
+  </main>
+  <script>
+    document.getElementById("course1").innerText = (courses[0].name)
+    document.getElementById("course2").innerText = (courses[1].name)
+    document.getElementById("course3").innerText = (courses[2].name)
+    document.getElementById("course4").innerText = (courses[3].name)
 
-      <div class="divider-2"></div>
+  </script>
+</body>
 
-      <section class="section" id="portifolio">
-        <div class="container grid">Portifolio</div>
-      </section>
-      </section>
-    </main>
-    <script src="main.js"></script>
-  </body>
 </html>
