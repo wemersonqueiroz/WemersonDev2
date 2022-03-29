@@ -2,23 +2,15 @@
 <html lang="en">
 
 <head>
-
-  <!-- JS SCRIPT-->
-
-  <!--<link rel="stylesheet" href="main.js"> -->
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <!-- PAGE INFO -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Landing Page</title>
-
   <!-- ICONS  -->
-
   <link rel="stylesheet" href="./assets/fonts/style.css" />
-
   <!-- STYLES: -->
   <link rel="stylesheet" href="mainstyle.css" />
-
   <!--Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,73 +20,10 @@
 </head>
 
 <body onload="startTime()">
-  <link rel="stylesheet" href="main.js">
-
   <!--========COURSE AND WORK ARRAYS===========-->
-
   <script>
-    //============JOBS ARRAY===============//
 
-    let jobs = [{
-        role: "IT Technician",
-        company: "NetServe LTD",
-        period: "03/2020" + " - " + "06/2021"
-      },
-      {
-        role: "Workshop Operative",
-        company: "Taylormade Golf",
-        period: "03/2020" + " - " + "06/2021"
-      },
-      {
-        role: "Ecommerce Manager",
-        company: "Vitrine Refrigeracao",
-        period: "03/2020" + " - " + "06/2021"
-      },
-      {
-        role: "IT Support Technician Jr.",
-        company: "DisDal",
-        period: "03/2020" + " - " + "06/2021"
-      }
-    ]
-
-    //===============COURSES ARRAY======================//
-
-
-    const courses = [{
-        name: "Fullstack Developer Bootcamp",
-        date: "03/2022",
-        where: "Udemy",
-        status: "Ongoing",
-      },
-      {
-        name: "JavaScript Essential Training",
-        date: "03/2022",
-        where: "LinkedIn",
-        status: "Finished",
-      },
-      {
-        name: "Smart Contract Developer",
-        date: "02/2022",
-        where: "Blockchain Council",
-        status: "Finished",
-      },
-      {
-        name: "Ethereum Blockchain Developer",
-        date: "02/2022",
-        where: "Udemy",
-        status: "Finished",
-      },
-      {
-        name: "Comptia A+",
-        date: "10/2020",
-        where: "The Training Room",
-        status: "Finished",
-      }
-    ];
   </script>
-
-
-
   <!-------------HEADER ------------>
   <header id="header">
     <nav class="container">
@@ -115,13 +44,8 @@
       <div class="toggle icon-cancel"></div>
     </nav>
   </header>
-
-
-
   <main>
-
-    <!-- HOME -->
-
+    <!---------HOME-------------->
     <section class="section" id="home">
       <div class="container grid">
         <div class="image">
@@ -139,11 +63,10 @@
             <pre id="hour" class="date"></pre>
 
           </h3>
-          <a class="button" href="#">Contact-me</a>
+          <a class="button" href="#">Contact</a>
         </div>
       </div>
     </section>
-
     <!----SCRIPT TO SHOW DATE---->
     <script>
       var now = new Date();
@@ -161,7 +84,7 @@
         months[now.getMonth()] + "/" +
         (fourdigits(now.getYear()));
 
-      document.getElementById("today").innerHTML = today
+      document.getElementById("today").innerHTML = today;
 
       //FUNCTION TO SHOW HOUR REAL TIME.
 
@@ -184,17 +107,11 @@
         return i;
       }
     </script>
-
     <div class="divider-1"></div>
     <!---ABOUT---->
-    <section class="section" id="homepage">
-      <div class="container grid">Home</div>
 
 
-    </section>
-
-    <div class="divider-2"></div>
-    <!----- SERVICES ------->
+    <!----- ABOUT ME  ------->
     <section class="section" id="about">
       <div class="container grid">
         <div class="image"><img src="./assets/img/eu.png" alt="Wemerson Queiroz">
@@ -203,118 +120,135 @@
           <h2 class="title">About Me</h2>
           <p>
             Despite my IT background, I've never thought about being a programmer, but fell in love with it after
-            getting into Solidity for Blockchain development. Now I'm living and thinking 24/7 about programming and how
-            to be a good professional and how to add value to the world with my skills.
+            getting into Solidity for Blockchain development.
           </p><br>
           <p>
-            My first contact with programming was in 2010 when I worked as E-commerce Manager while doing my
-            administrative role and shadowing the Web Developer to finish the website while he was using JavaScript and
-            JQuery.
+            My first contact with programming was in 2010 working as E-commerce Manager while and shadowing the Web
+            Developer working on the website.
           </p><br>
           <p>
-            Back in the day I'd never imagine that I would be passionate about programming but here I am now, mastering
-            HTML, Css and JavaScript to become a FullStack Developer.
+            Back in the day I'd never imagine that I would be passionate about programming but here I am now, studying
+            HTML, Css and JavaScript to become a Front-end Developer.
           </p>
     </section>
 
-    <div class="divider-1"></div>
-
+    <div class="divider-2"></div>
+    <!-------SKILLS----------->
     <section class="section" id="skill">
-
-      <div class="container grid">
+      <div class=" container grid">
         <header>
-          <h2 class="title">Skills</h2>
-          <p>
-            At the moment I'm mastering <strong>HTML, CSS & JavaScript</strong> and my next step is add
-            <strong>ReactJs</strong> to my skillset.
-          </p>
+          <div class="title">Skills</div>
+
           <!--==============COURSES ===================-->
         </header>
         <div class="cards grid">
           <div class="card grid">
             <i class="icon-skill-icon"></i>
-            <h3 class="title ">
-              <pre id="course1" class="title"></pre>
+            <pre id="course0" class="title"></pre>
+            <pre id="status0" class="title"></pre>
             </h3>
             <p>
-              Lorem
+
+
+            </p>
+          </div>
+          <div class="card grid">
+            <i class="icon-skill-icon"></i>
+            <pre id="course1" class="title"></pre>
+            <pre id="status1" class="title"></pre>
+            <p>
+
             </p>
           </div>
           <div class="card grid">
             <i class="icon-skill-icon"></i>
             <pre id="course2" class="title"></pre>
+            <pre id="status2" class="title"></pre>
             <p>
-              Lorem
+
             </p>
           </div>
           <div class="card grid">
             <i class="icon-skill-icon"></i>
             <pre id="course3" class="title"></pre>
+            <pre id="status3" class="title"></pre>
             <p>
-              Lorem
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider-1"></div>
+    <!---------EXPERIENCES-------->
+    <section class="section" id="experiences">
+      <div class=" container grid">
+        <header>
+          <h2 class="title">Experiences</h2>
+
+          <!--==============JOBS ===================-->
+        </header>
+        <div class="cards grid">
+          <div class="card grid">
+            <i class="icon-experience-icon"></i>
+            <pre id="job0" class="title "></pre>
+            <pre id="period0" class="title date"></pre>
+            </h3>
+            <p>
+
             </p>
           </div>
           <div class="card grid">
-            <i class="icon-skill-icon"></i>
-            <pre id="course4" class="title"></pre>
+            <i class="icon-experience-icon"></i>
+            <pre id="job1" class="title"></pre>
+            <pre id="period1" class="title date"></pre>
             <p>
-              Lorem
+
+            </p>
+          </div>
+          <div class="card grid">
+            <i class="icon-experience-icon"></i>
+            <pre id="job2" class="title"></pre>
+            <pre id="period2" class="title date"></pre>
+            <p>
+
+            </p>
+          </div>
+          <div class="card grid">
+            <i class="icon-experience-icon"></i>
+            <div id="job3" class="title"></div>
+            <div id="period3" class="title date"></div>
+            <p>
+
             </p>
           </div>
         </div>
       </div>
     </section>
     <div class="divider-2"></div>
-
-    <section class="section" id="experience">
-      <div class="container grid">
-        <header>
-          <h2 class="title">Job Experience</h2>
-        </header>
-        <div class="experiences">
-          <p>
-            <span>&ldquo;</span>
-            Lorem
-          </p>
-          <div class="experience">
-
-
-          </div>
-          <div class="experience"></div>
-          <div class="experience"></div>
-        </div>
-      </div>
-    </section>
-
     <div class="divider-1"></div>
-
-    <section class="section" id="experience">
+    <!---------CONTACT ME--------->
+    <section class="section" id="contact">
       <div class="container grid">
         <header>
           <h2 class="title">Contact</h2>
         </header>
+
       </div>
     </section>
-
     <div class="divider-2"></div>
-
-    <section class="section" id="experience">
+    <!--------PORTIFOLIO---------->
+    <section class="section" id="portifolio">
       <div class="container grid">
         <header>
           <h2 class="title">Portifolio</h2>
         </header>
       </div>
     </section>
-
     </section>
   </main>
-  <script>
-    document.getElementById("course1").innerText = (courses[0].name)
-    document.getElementById("course2").innerText = (courses[1].name)
-    document.getElementById("course3").innerText = (courses[2].name)
-    document.getElementById("course4").innerText = (courses[3].name)
+  <script src="./main.js"></script>
 
-  </script>
 </body>
 
 </html>
