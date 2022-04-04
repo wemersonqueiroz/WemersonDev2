@@ -32,6 +32,14 @@ img {
   --body-color: hsl(0 0% 98%);
 }
 
+/*==== Alignment Status =====*/
+
+div .pre {
+  margin: 0px auto 0px auto;
+  display: inline;
+
+}
+
 /*========== BASE ==========*/
 /*font-family: 'Montserrat', sans-serif;
 /font-family: 'Raleway', sans-serif; */
@@ -45,6 +53,8 @@ body {
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
+
+
 
 .title {
   font: 700 1.875rem "Montserrat", sans-serif;
@@ -82,23 +92,23 @@ body {
       hsla(var(--hue), 36%, 57%, 1));
 }
 
-.date {
+.date  {
   color: var(--base-color);
 }
 
 /*========== LAYOUT ==========*/
 .container {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  /* margin-left: 1rem;
+  margin-right: 1rem; */
 }
 
 .grid {
-  display: grid;
-  gap: 2rem;
+  display: grid ;
+  gap: 1rem;
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 1rem 1rem;
 }
 
 .section .title {
@@ -337,13 +347,17 @@ nav.show div.icon-cancel {
 }
 
 /* ======= SKILLS ========== */
-
+.cards {
+  text-align: center;
+}
 .cards.grid {
-  gap: 1.5rem;
+  gap: 1rem;
+  width: 100%
+
 }
 
 .card {
-  padding: 3.625rem 2rem;
+  padding: 2rem 0.625rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-bottom: 0.25rem solid var(--base-color);
   border-radius: 0.25rem 0.25rem 0 0;
@@ -356,8 +370,33 @@ nav.show div.icon-cancel {
   font-size: 4.5rem;
   color: var(--base-color);
 }
+.card.grid {
+  text-align: center;
+}
 
 .card title {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
+}
+
+.row{
+  font-weight: 700;
+  font-size: 1rem;
+  justify-content:center
+}
+  /* For mobile phones: */
+
+@media (max-width: 768px) {
+.col-4 {
+  width: 30%;
+  text-align: left
+
+}
+.row {
+  font-size: 0.625rem;
+  font-weight: 500;
+
+}
+
+
 }
