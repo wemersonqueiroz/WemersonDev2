@@ -1,4 +1,3 @@
-
 // OPEN/CLOSE MENU => onClick Icons: Bullets & X //
 
 const nav = document.querySelector("#header nav")
@@ -34,128 +33,139 @@ window.addEventListener("scroll", function () {
     // SCROLL < HEADER HEIGHT
   }
 })
+// <!--========COURSE AND WORK ARRAYS===========-->
 
+//===============COURSES ARRAY======================//
 
+const courses = [
+  {
+    name: "Fullstack Developer",
+    date: "03/2022",
+    school: "Udemy",
+    status: "Ongoing",
+  },
+  {
+    name: "JavaScript Essential",
+    date: "03/2022",
+    school: "LinkedIn",
+    status: "Finished",
+  },
+  {
+    name: "Smart Contract Dev",
+    date: "02/2022",
+    school: "Blockchain Council",
+    status: "Finished",
+  },
+  {
+    name: "Ethereum Dev",
+    date: "02/2022",
+    school: "Udemy",
+    status: "Finished",
+  },
+  {
+    name: "Comptia A+",
+    date: "10/2020",
+    school: "The Training Room",
+    status: "Finished",
+  },
+]
+let courseTitle = []
+let dateFinalized = []
+let school = []
 
-
-    
-    //===============COURSES ARRAY======================//
-
-
-    const courses = [{
-      name: "Fullstack Developer Bootcamp",
-      date: "03/2022",
-      where: "Udemy",
-      status: "Ongoing",
-    },
-    {
-      name: "JavaScript Essential Training",
-      date: "03/2022",
-      where: "LinkedIn",
-      status: "Finished",
-    },
-    {
-      name: "Smart Contract Developer",
-      date: "02/2022",
-      where: "Blockchain Council",
-      status: "Finished",
-    },
-
-    {
-      name: "Comptia A+",
-      date: "10/2020",
-      where: "The Training Room",
-      status: "Finished",
+courses.forEach(course => {
+  for (let key in course) {
+    if (key === "name") {
+      courseTitle.push(course[key])
     }
-    ];
-
-    let courseTitle = [];
-    let dateFinalized = [];
-    
-    courses.forEach(course => {
-      for (let key in course) {
-        
-        if (key === 'name') {
-          courseTitle.push(course[key]);
-        }
-        if (key === 'date') {
-          dateFinalized.push(course[key]);
-        }
-      }
-    });
-    
-    console.log('date', dateFinalized);
-    console.log('name', courseTitle);
-    
-    const courseList = $.map(courseTitle, function(value){
-      return `<div class="courseTitleIndex">` + value + "</div>";
-    });
-    
-    const dataFinalizedList = $.map(dateFinalized, function(value){
-      return `<div class="date">` + value + "</div>";
-    });
-    
-    // jquery HTML so aceita uma function
-    // pq vc nao pode ter duas tags <html> dentro de um arquivo
-    $('#course0').append(courseList[0]);
-    $('#course1').append(courseList[1]);
-    $('#course2').append(courseList[2]);
-    $('#course3').append(courseList[3]);
-
-    $('#status0').append(dataFinalizedList[0]);
-    $('#status1').append(dataFinalizedList[1]);
-    $('#status2').append(dataFinalizedList[2]);
-    $('#status3').append(dataFinalizedList[3]);
-
-
-     //============JOBS ARRAY===============//
-
-     let jobs = [{
-      role: "IT Technician",
-      company: "NetServe LTD",
-      period: "03/2020" + " - " + "06/2021"
-    },
-    {
-      role: "Workshop Operative",
-      company: "Taylormade Golf",
-      period: "03/2020" + " - " + "06/2021"
-    },
-    {
-      role: "Ecommerce Manager",
-      company: "Vitrine Refrigeracao",
-      period: "03/2020" + " - " + "06/2021"
-    },
-    {
-      role: "IT Support Technician Jr.",
-      company: "DisDal",
-      period: "03/2020" + " - " + "06/2021"
+    if (key === "date") {
+      dateFinalized.push(course[key])
     }
-    ]
+    if (key === "school") {
+      school.push(course[key])
+    }
+  }
+})
 
-    let jobList = [];
-    let periodList = [];
-    
-    jobs.forEach(role => {
-      for (let key in role) {
-        
-        if (key === 'role') {
-          jobList.push(role[key]);
-        }
-        if (key === 'period') {
-          periodList.push(role[key]);
-        }
-      }
-    });
-    
+console.log("courseTitle", courseTitle)
+console.log("dateFinalized", dateFinalized)
+console.log("school", school)
 
-    // jquery HTML so aceita uma function
-    // pq vc nao pode ter duas tags <html> dentro de um arquivo
-    $('#job0').append(jobList[0]);
-    $('#job1').append(jobList[1]);
-    $('#job2').append(jobList[2]);
-    $('#job3').append(jobList[3]);
+const namesList = $.map(courseTitle, function (value) {
+  return "<div class='row justify-content-start'>" + value + "</div>"
+})
+const schoolList = $.map(school, function (value) {
+  return "<div class='row justify-content-center'>" + value + "</div>"
+})
+const dataFinalizedList = $.map(dateFinalized, function (value) {
+  return "<div class='row justify-content-end'>" + value + "</div>"
+})
 
-    $('#period0').append(periodList[0]);
-    $('#period1').append(periodList[1]);
-    $('#period2').append(periodList[2]);
-    $('#period3').append(periodList[3]);
+$(".coursesNames").html(namesList)
+$(".coursesDates").html(dataFinalizedList)
+$(".coursesSchool").html(schoolList)
+
+//============JOBS ARRAY===============//
+
+let jobs = [
+  {
+    role: "Social Media Manager",
+    company: "Lotus Media UK",
+    period: "Jun 2021 - Present",
+  },
+  {
+    role: "IT Technician",
+    company: "NetServe LTD",
+    period: "Mar 2020 - Jun 2021",
+  },
+  {
+    role: "Workshop Operative",
+    company: "Taylormade Golf",
+    period: "Jan 2019 – Mar 2021",
+  },
+  {
+    role: "Ecommerce Manager",
+    company: "Vitrine Refrigeracao",
+    period: "Jan 2010 – Sep 2014",
+  },
+  {
+    role: "IT Technician Jr.",
+    company: "DisDal",
+    period: "Jan 2007 – Dec 2009",
+  },
+]
+
+jobRole = []
+jobCompany = []
+jobPeriod = []
+
+jobs.forEach(jobs => {
+  for (let key in jobs) {
+    if (key === "role") {
+      jobRole.push(jobs[key])
+    }
+    if (key === "company") {
+      jobCompany.push(jobs[key])
+    }
+    if (key === "period") {
+      jobPeriod.push(jobs[key])
+    }
+  }
+})
+
+const jobsRoles = $.map(jobRole, function (value) {
+  return `<div id="roles" class="row justify-content-start">` + value + "</div>"
+})
+$(".jobTitle").html(jobsRoles)
+
+const jobsCompanies = $.map(jobCompany, function (value) {
+  return (
+    `<div id="companies" class="row justify-content-center">` + value + "</div>"
+  )
+})
+$(".jobCompany").html(jobsCompanies)
+
+const jobsPeriods = $.map(jobPeriod, function (value) {
+  return `<div id="periods" class="row justify-content-end">` + value + "</div>"
+})
+$(".jobTime").html(jobsPeriods)
