@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   <!-- JQUERY -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -30,9 +32,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Raleway:wght@400;500;700&display=swap"
     rel="stylesheet" />
+
 </head>
 
-<body onload="startTime()">
+<body>
+  <!-- <body onload="startTime()"> -->
 
 
 
@@ -82,12 +86,11 @@
             <pre id="hour" class="date"></pre>
 
           </h3>
-          <a class="button" href="#">Contact-me</a>
         </div>
       </div>
     </section>
 
-    <!----SCRIPT TO SHOW DATE---->
+    <!-- --SCRIPT TO SHOW DATE--
     <script>
       var now = new Date();
       var days = new Array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat');
@@ -126,18 +129,11 @@
         }; // add zero in front of numbers < 10
         return i;
       }
-    </script>
+    </script> -->
 
-    <div class="divider-1"></div>
     <!---ABOUT---->
-    <section class="section" id="homepage">
-      <div class="container grid">Home</div>
-
-
-    </section>
 
     <div class="divider-2"></div>
-    <!----- SERVICES ------->
     <section class="section" id="about">
       <div class="container grid">
         <div class="image"><img src="./assets/img/eu.png" alt="Wemerson Queiroz">
@@ -161,6 +157,7 @@
     </section>
 
 
+    <div class=" divider-1"></div>
 
     <section class="section" id="skill">
 
@@ -169,7 +166,7 @@
           <h2 class="title">Skills</h2>
           <p>
             At the moment I'm mastering <strong>HTML, CSS & JavaScript</strong> and my next step is add
-            <strong>ReactJs</strong> to my skillset.
+            <strong>ReactJs, NodeJs & MongoDB</strong> to my skillset.
           </p>
           <!--==============COURSES ===================-->
         </header>
@@ -198,7 +195,7 @@
     </section>
     <div class=" divider-2"></div>
 
-    <section class="section" id="skill">
+    <section class="section" id="jobs">
 
       <div class="container grid">
         <header>
@@ -207,11 +204,11 @@
 
           </p>
 
-          <!--==============COURSES ===================-->
+          <!--==============JOBS ===================-->
         </header>
         <div class="cards grid">
           <div class="card grid ">
-            <i class="icon-skill-icon"></i>
+            <i class="icon-experience-icon"></i>
             <div class="container">
               <div class="row ">
                 <div class="col-4 ">
@@ -221,6 +218,7 @@
                 <div class="col-4">
                   <div class="jobCompany">
                   </div>
+
                 </div>
                 <div class="col-4">
                   <div class="jobTime">
@@ -235,26 +233,96 @@
 
     <div class="divider-1"></div>
 
-    <section class="section" id="experience">
-      <div class="container grid">
+    <section class="section" id="projects">
+      <div class="container">
         <header>
-          <h2 class="title">Contact</h2>
+          <h2 class="title">Portifolio</h2>
         </header>
+        <div class="projects swiper-container">
+          <div class="swiper-wrapper">
+            <div class="project swiper-slide">
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perspiciatis ut repellendus est modi
+                  quisquam,
+                  distinctio ipsa, possimus id fuga eos repudiandae facere? Id commodi deleniti placeat, quos tenetur
+                  harum?
+                </p>
+                <cite>
+                  <img src="./assets/img/eu.png" alt="" />
+                  teste1
+                </cite>
+              </blockquote>
+            </div>
+            <div class="project swiper-slide">
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perspiciatis ut repellendus est modi
+                  quisquam,
+                  distinctio ipsa, possimus id fuga eos repudiandae facere? Id commodi deleniti placeat, quos tenetur
+                  harum?
+                </p>
+                <cite>
+                  <img src="./assets/img/eu.png" alt="">
+                  test2
+                </cite>
+              </blockquote>
+            </div>
+            <div class="project swiper-slide">
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perspiciatis ut repellendus est modi
+                  quisquam,
+                  distinctio ipsa, possimus id fuga eos repudiandae facere? Id commodi deleniti placeat, quos
+                  tenetur
+                  harum?
+                </p>
+                <cite>
+                  <img src="./assets/img/eu.png" alt="">
+                  test3
+                </cite>
+              </blockquote>
+            </div>
+
+            <div class="swiper-pagination">
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <div class="divider-2"></div>
 
-    <section class="section" id="experience">
+    <section class="section" id="contact">
       <div class="container grid">
-        <header>
-          <h2 class="title">Portifolio</h2>
-        </header>
+        <div class="text">
+          <h2 class="title">Contact</h2>
+          <p>Contact me through Social Links:</p>
+        </div>
+        <div class="links">
+          <ul class="grid">
+            <li><a href="#" target="_blank"><i class="icon-social"></i> Github</a></li>
+            <li> <a href="#" target="_blank"><i class="icon-twitter"></i> Twitter</a></li>
+            <li><a href="#" target="_blank"><i class="icon-linkedin"></i> LinkedIn</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=07753410876&text=Hi, Wemerson!" target="_blank"><i
+                  class="icon-whatsapp"></i>
+                Whatsapp</a></li>
+          </ul>
+        </div>
       </div>
     </section>
-
     </section>
   </main>
+  <!-- SWIPER JS -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <!-- Scroll Reveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- JAVASCRIPT -->
   <script src="./main.js"></script>
 </body>
 

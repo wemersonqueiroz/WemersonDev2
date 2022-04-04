@@ -33,6 +33,19 @@ window.addEventListener("scroll", function () {
     // SCROLL < HEADER HEIGHT
   }
 })
+
+//===============SWIPER======================//
+
+const swiper = new Swiper(".swiper-container", {
+  slidesPerView: 1,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+  },
+  mousewheel: true,
+  keyboard: true,
+})
+
 // <!--========COURSE AND WORK ARRAYS===========-->
 
 //===============COURSES ARRAY======================//
@@ -169,3 +182,12 @@ const jobsPeriods = $.map(jobPeriod, function (value) {
   return `<div id="periods" class="row justify-content-end">` + value + "</div>"
 })
 $(".jobTime").html(jobsPeriods)
+
+/* ======= SCROLL REVEAL : Show content while scroll the page ========== */
+
+const scrollReveal = ScrollReveal({
+  origin: "top",
+  distance: "30px",
+  duration: 700,
+  reset: true,
+})
