@@ -155,6 +155,11 @@ main {
   color: var(--base-color);
 }
 
+.logo-alt span {
+  color: var(--text-color-light)
+
+}
+
 /*====  NAVIGATION ================== */
 
 nav {
@@ -247,7 +252,7 @@ nav.show ul.grid {
   cursor: pointer;
 }
 
-nav .icon-cancel {
+nav .icon-cross {
   visibility: hidden;
   opacity: 0;
 
@@ -258,7 +263,7 @@ nav .icon-cancel {
   transition: 0.2s;
 }
 
-nav.show div.icon-cancel {
+nav.show div.icon-cross {
   visibility: visible;
   opacity: 1;
   top: 1.5rem;
@@ -406,6 +411,10 @@ nav.show div.icon-cancel {
   background: white;
 
 }
+
+#projects i {
+  color : var(--base-color)
+}
 #projects header {
     margin-bottom:0;
     margin-left: 1.5rem;
@@ -472,32 +481,109 @@ nav.show div.icon-cancel {
 
 /* ======= CONTACT ========== */
 
+
 #contact .grid {
-  gap: 3rem
+  gap: 1rem
 }
-li {
-  list-style-type: none;
-  border-bottom: 1rem;
-}
-#contact .text p {
-  margin-bottom:2rem
+#contact i {
+  color : var(--base-color)
 }
 
-#contact i {
+#contact .text p {
+  margin-bottom:1rem
+}
+
+#contact a {
   font-size: 1.5rem;
   margin-right: 0.625rem;
+  color: var(--base-color);
+  padding: 2rem 0;
 }
 
-#contact ul.grid {
-  gap: 2rem
+/* ======= FOOTER ========== */
+footer  {
+  padding: 2rem 0;
+  background: var(--base-color);
 }
 
-#contact ul li {
-  display : flex;
-  align-items: center;
+footer i {
+    font-size: 1.5rem;
+    margin-right: 0.625rem;
+    color: var(--text-color-light)
+  }
+
+  footer i:hover {
+    font-size: 2rem;
+}
+
+footer .logo {
+  display : inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 2rem
+}
+
+footer p {
+  margin: 0.5rem 0 1rem;
+}
+
+footer.brand {
+  color: var(--text-color-light);
+  margin-bottom: 0.75rem
+}
+
+footer a:hover {
+  color: var(--text-color-light)
+}
+
+
+footer .social a {
+
+  font-size: 1.5rem;
+  margin-right: 0.625rem;
+  color: var(--text-color-light)
+}
+
+.back-to-top {
+  background: var(--base-color);
+  color: var(--text-color-light);
+
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+
+  padding: 1rem;
+  clip-path: circle();
+  font-size: 1rem;
+  line-height: 0;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 0.3s;
+  transform: translateY(100%)
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0)
+}
+
+
+/* RESPONSIVE */
+
+@media (min-width: 1200px) {
 
 }
-#contact ul li i {
-  color: var(--base-color)
+
+@media (min-width: 1023px) {
+
 }
 
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 767px) {
+
+}

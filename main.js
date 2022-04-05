@@ -34,6 +34,24 @@ window.addEventListener("scroll", function () {
   }
 })
 
+//===============BACK TO TOP BUTTON======================//
+
+const backToTop = document.querySelector(".back-to-top")
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= 560) {
+    backToTop.classList.add('show')
+  } else {
+    backToTop.classList.remove('show')
+  }
+})
+
+
+
+
+
+
+
+
 //===============SWIPER======================//
 
 const swiper = new Swiper(".swiper-container", {

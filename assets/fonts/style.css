@@ -1,19 +1,18 @@
 @font-face {
-  font-family: "icomoon";
-  src: url("fonts/icomoon.eot?gsd8uw");
-  src: url("fonts/icomoon.eot?gsd8uw#iefix") format("embedded-opentype"),
-    url("fonts/icomoon.ttf?gsd8uw") format("truetype"),
-    url("fonts/icomoon.woff?gsd8uw") format("woff"),
-    url("fonts/icomoon.svg?gsd8uw#icomoon") format("svg");
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?lmqlzu');
+  src:  url('fonts/icomoon.eot?lmqlzu#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?lmqlzu') format('truetype'),
+    url('fonts/icomoon.woff?lmqlzu') format('woff'),
+    url('fonts/icomoon.svg?lmqlzu#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
+  font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -26,102 +25,48 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-list:before {
+.icon-projects:before {
+  content: "\e909";
+}
+.icon-email:before {
   content: "\e90b";
 }
-.icon-todo:before {
-  content: "\e90b";
+.icon-contact:before {
+  content: "\e90d";
 }
-.icon-bullet:before {
-  content: "\e90b";
+.icon-projects1:before {
+  content: "\e90a";
+}
+.icon-skill:before {
+  content: "\e908";
+}
+.icon-projects2:before {
+  content: "\e905";
+}
+.icon-jobs:before {
+  content: "\e906";
 }
 .icon-menu:before {
-  content: "\e90b";
+  content: "\e907";
 }
-.icon-options:before {
-  content: "\e90b";
+.icon-up:before {
+  content: "\e90e";
 }
 .icon-cross:before {
-  content: "\e90c";
-}
-.icon-cancel:before {
-  content: "\e90c";
-}
-.icon-close:before {
-  content: "\e90c";
-}
-.icon-quit:before {
-  content: "\e90c";
-}
-.icon-remove:before {
   content: "\e90c";
 }
 .icon-github:before {
   content: "\e900";
 }
-.icon-brand:before {
-  content: "\e900";
-}
-.icon-octacat:before {
-  content: "\e900";
-}
-.icon-social:before {
-  content: "\e900";
-}
 .icon-twitter:before {
-  content: "\e901";
-}
-.icon-brand1:before {
-  content: "\e901";
-}
-.icon-tweet:before {
-  content: "\e901";
-}
-.icon-social1:before {
   content: "\e901";
 }
 .icon-whatsapp:before {
   content: "\e902";
 }
-.icon-brand2:before {
-  content: "\e902";
-}
-.icon-social2:before {
-  content: "\e902";
-}
 .icon-linkedin:before {
-  content: "\e903";
-}
-.icon-brand3:before {
-  content: "\e903";
-}
-.icon-social3:before {
   content: "\e903";
 }
 .icon-facebook:before {
   content: "\e904";
-}
-.icon-brand4:before {
-  content: "\e904";
-}
-.icon-social4:before {
-  content: "\e904";
-}
-.icon-about-icon:before {
-  content: "\e905";
-}
-.icon-contact-icon:before {
-  content: "\e906";
-}
-.icon-experience-icon:before {
-  content: "\e907";
-}
-.icon-home-icon:before {
-  content: "\e908";
-}
-.icon-portifolio-icon:before {
-  content: "\e909";
-}
-.icon-skill-icon:before {
-  content: "\e90a";
 }
